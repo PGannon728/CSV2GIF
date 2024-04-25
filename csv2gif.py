@@ -43,7 +43,7 @@ class CSV2GIF:
 
 
             Returns:
-            points (matplotlib thing): ___ object for reference later
+            points (tuple): matplotlib object containing plot objects
             """
         z_df = self._create_z_slice(z_label, z_val)
         x_axis = z_df[x_label].values.tolist()
@@ -191,7 +191,7 @@ class CSV2GIF:
             medians(bool): display median bars on violin/boxplot
 
             Returns:
-            points
+            points (tuple): matplotlib object containing plot
             """
         z_df = self._create_z_slice(z_label, z_val)
         data = z_df[x_series].values
